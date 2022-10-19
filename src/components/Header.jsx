@@ -4,9 +4,10 @@ import { CartContext } from './Root'
 
 const Header = () => {
   const [cart, setCart] = useContext(CartContext)
+  console.log(setCart);
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+    <div className='bg-gray-50 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
       <div className='relative flex items-center justify-between'>
         <Link
           to='/'
@@ -26,7 +27,7 @@ const Header = () => {
             Smart Home
           </span>
         </Link>
-        <ul className='flex items-center hidden space-x-8 lg:flex'>
+        <ul className='flex-0 items-center hidden space-x-8 lg:flex'>
           <li>
             <Link
               to='/home'
